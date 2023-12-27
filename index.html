@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="pdf-scale" content="100%">
+    <title>ID Card Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <link rel="stylesheet" href="App/style.css">
+</head>
+<body>
+    <div class="OutMAin">
+        <div class="Output">
+            <div class="Formatmain">
+                <div class="Profile-image">
+                    <img id="myImage" src="Asect/Person IMG/Person1.png" alt="">
+                </div>
+                <div class="Name">
+                    <h1 id="name">Sahed bin Amin</h1>
+                </div>
+                <div class="desc">
+                    <div class="Details">
+                        <p id="roll">Board Roll&ensp; : 676961</p>
+                    </div>
+                    <div class="Details">
+                        <p id="reges">Reg. No &emsp;&ensp;: 1814880023</p>
+                    </div>
+                    <div class="Details">
+                        <p id="shift">Shift &emsp;&emsp;&ensp;&ensp;: 2nd</p>
+                    </div>
+                    <div class="Details">
+                        <p id="session">Session&emsp;&emsp;: 2021-2022</p>
+                    </div>
+                    <div class="Details">
+                        <p id="Blood">Blood Group: O(+ve)</p>
+                    </div>
+                    <div class="Details">
+                        <p id="address" style="font-size: 9px;">Address&ensp;&ensp;&ensp;&ensp;: New Gulshan, Bandarban sadar,</p>
+                    </div>
+                    <div class="Details">
+                        <p id="Distric">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bandarban</p>
+                    </div>
+                    <div class="Details">
+                        <p id="contact" style="font-size: 9.5px;">Contact No&ensp; : +8801304404489</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="SaveButton" onclick="saveAsPNG()">Save PNG</button>
+    </div>
+    <div class="FormMain">
+        <form id="idCardForm">
+            <label for="name">Name:</label>
+            <input type="text" id="nameInput" name="name" required>
+
+            <label for="roll">Board Roll:</label>
+            <input type="text" id="rollInput" name="roll" required>
+
+            <label for="reges">Reg. No:</label>
+            <input type="text" id="regesInput" name="reges" required>
+            <label for="shift">Shift:</label>
+            <input type="text" id="shiftInput" name="shift" required>
+
+            <label for="session">Session:</label>
+            <input type="text" id="sessionInput" name="session" required>
+
+            <label for="blood">Blood Group:</label>
+            <input type="text" id="bloodInput" name="blood" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="addressInput" name="address" required>
+
+            <label for="district">District:</label>
+            <input type="text" id="districtInput" name="district" required>
+
+            <label for="contact">Contact No:</label>
+            <input type="text" id="contactInput" name="contact" required>
+            <!-- Image Input Field -->
+            <label for="image">Upload Image:</label>
+            <input type="file" id="imageInput" name="image" accept="image/*">
+
+            <button type="button" onclick="generateIDCard()">Generate ID Card</button>
+        </form>
+    </div>
+    <script src="App/index.js"></script>
+</body>
+</html>
